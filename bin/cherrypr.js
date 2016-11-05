@@ -6,7 +6,7 @@ let lastCommit = execSync(`git rev-parse HEAD`)
 let currentBranch = execSync(`git branch`)
 let newBranch = Math.floor(Math.random()*999999999).toString(36)
 
-console.log('LAST', lastCommit)
+console.log('INFO', lastCommit, currentBranch, newBranch)
 
 console.log('## fetch')
 execSync(`git fetch`, {stdio: [0, 1, 2]})
