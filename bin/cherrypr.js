@@ -3,7 +3,7 @@
 var execSync = require('child_process').execSync
 
 let lastCommit = execSync(`git rev-parse HEAD`)
-let currentBranch = execSync(`git branch`)
+let currentBranch = execSync(`git rev-parse --abbrev-ref HEAD`)
 let newBranch = Math.floor(Math.random()*999999999).toString(36)
 
 console.log('INFO', lastCommit, currentBranch, newBranch)
