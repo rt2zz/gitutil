@@ -8,4 +8,5 @@ const app = program
   .command('cherrypr', 'Make and PR a new branch which is origin/master + latest commit of the active branch')
   .command('safereset [name]', 'Reset hard to master, after committing and saving the latest into a new backup branch')
   .parse(process.argv)
-  
+
+module.exports = app
