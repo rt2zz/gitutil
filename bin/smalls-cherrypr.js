@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
-var execSync = require('child_process').execSync
+const execSync = require('child_process').execSync
+const name = require('./utils/name')
 
 let lastCommit = execSync(`git rev-parse HEAD`)
 let currentBranch = execSync(`git rev-parse --abbrev-ref HEAD`)
