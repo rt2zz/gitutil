@@ -5,9 +5,12 @@ const name = require('./utils/name')
 
 let lastCommit = execSync(`git rev-parse HEAD`)
 let currentBranch = execSync(`git rev-parse --abbrev-ref HEAD`)
-let newBranch = Math.floor(Math.random()*999999999).toString(36)
 
-console.log('INFO', lastCommit, currentBranch, newBranch)
+const program = require('commander')
+program.parse(process.argv)
+let branchName = program.args[0]
+
+let newBranch = name.branch(branchName)
 
 console.log('## fetch')
 execSync(`git fetch`, {stdio: [0, 1, 2]})

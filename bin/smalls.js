@@ -5,8 +5,6 @@ const program = require('commander')
 
 const app = program
   .version(pkg.version)
-  .command('cherrypr', 'Make and PR a new branch which is origin/master + latest commit of the active branch')
-  .command('safereset [name]', 'Reset hard to master, after committing and saving the latest into a new backup branch')
-  .parse(process.argv)
-
-module.exports = app
+  .command('cherrypr [name]', 'Make and PR a new branch which is origin/master + latest commit of the active branch')
+  .command('safereset', 'Reset hard to master, after committing and saving the latest into a new backup branch')
+  .command('clean', 'Delete all local smalls-backup-* branches')
