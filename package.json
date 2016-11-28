@@ -1,5 +1,5 @@
 {
-  "name": "gitutil",
+  "name": "smalls",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "cherrypr": "bin/cherrypr.js"
+    "smalls": "./smalls"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
