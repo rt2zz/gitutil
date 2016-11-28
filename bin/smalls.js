@@ -3,8 +3,11 @@
 const pkg =  require('../package.json')
 const program = require('commander')
 
+console.log('RUN SMALLS')
+
 const app = program
   .version(pkg.version)
   .command('cherrypr [name]', 'Make and PR a new branch which is origin/master + latest commit of the active branch')
   .command('safereset', 'Reset hard to master, after committing and saving the latest into a new backup branch')
   .command('clean', 'Delete all local smalls-backup-* branches')
+  .parse(process.argv)
