@@ -4,7 +4,6 @@ const execSync = require('child_process').execSync
 const name = require('./utils/name')
 
 const program = require('commander')
-program.parse(process.argv)
 console.log('ARGS', program.args)
 
 execSync(`git fetch origin`, {stdio: [0, 1, 2]})
