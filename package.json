@@ -12,6 +12,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "git+https://github.com/tj/commander.js.git"
   }
 }
